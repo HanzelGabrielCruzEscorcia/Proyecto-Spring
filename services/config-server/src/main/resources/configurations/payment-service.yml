@@ -23,4 +23,4 @@ spring:
         spring:
           json:
             type:
-              mapping: paymentConfirmation:com.alibou.payment.payment.PaymentMethod.PaymentNotificationRequest
+              mapping: paymentConfirmation:com.alibou.payment.notification.PaymentNotificationRequest
