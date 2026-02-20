@@ -1,4 +1,4 @@
-package com.alibou.config_server;
+package com.alibou.configserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,0 +1,26 @@
+server:
+  port: 8060
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/payment
+    username: alibou
+    password: alibou
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      properties:
+        spring:
+          json:
+            type:
+              mapping: paymentConfirmation:com.alibou.payment.payment.PaymentMethod.PaymentNotificationRequest
